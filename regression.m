@@ -15,7 +15,7 @@ TTO = con2seq(TrainTestoutput');
 
 rng(5)
 
-net = timedelaynet(1:4,7);%при данных  параметрах, получена самая низкая погрешность
+net = timedelaynet(1:4,7);%ГЇГ°ГЁ Г¤Г Г­Г­Г»Гµ  ГЇГ Г°Г Г¬ГҐГІГ°Г Гµ, ГЇГ®Г«ГіГ·ГҐГ­Г  Г±Г Г¬Г Гї Г­ГЁГ§ГЄГ Гї ГЇГ®ГЈГ°ГҐГёГ­Г®Г±ГІГј
 net.divideFcn="divideblock";
 
 [Xs,Xi,Ai,Ts] = preparets(net,TDI,TDO);
@@ -30,7 +30,7 @@ plot(cell2mat(R))
 
 
 Q = net(TTI);
-plot(cell2mat(TTO))%Для сравнения с тестовыми данными
+plot(cell2mat(TTO))%Г„Г«Гї Г±Г°Г ГўГ­ГҐГ­ГЁГї Г± ГІГҐГ±ГІГ®ГўГ»Г¬ГЁ Г¤Г Г­Г­Г»Г¬ГЁ
 hold on
 plot(cell2mat(Q))
 
